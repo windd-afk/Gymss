@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>XYZ Gym | Premium Fitness Center with 24/7 Access</title>
+  <meta name="description" content="Train at XYZ Gym: smart equipment, certified coaches, recovery lounge and 24/7 access. Claim your free day pass today.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['"Barlow Condensed"', 'Impact', 'sans-serif'],
+            sans: ['Inter', 'system-ui', 'sans-serif']
+          },
+          colors: { lime: { neon: '#b6ff3c' } }
+        }
+      }
+    };
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body { background: #0c0e12; }
+    .img-zoom img { transition: transform .7s ease; }
+    .img-zoom:hover img { transform: scale(1.08); }
+    :focus-visible { outline: 2px solid #b6ff3c; outline-offset: 3px; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      * { transition: none !important; animation: none !important; }
+    }
+  </style>
+</head>
+<body class="font-sans text-zinc-300 antialiased">
+
+  <!-- Navigation -->
+  <header class="sticky top-0 z-50 border-b border-white/10 bg-zinc-950/85 backdrop-blur">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between px-5 py-4" aria-label="Main">
+      <a href="#top" class="nav-link flex items-center gap-2 font-display text-3xl font-extrabold tracking-wide text-white">
+        <i data-lucide="dumbbell" class="h-7 w-7 text-lime-neon"></i>XYZ GYM
+      </a>
+      <ul class="hidden items-center gap-8 text-sm font-medium md:flex">
+        <li><a href="#features" class="nav-link transition hover:text-lime-neon">Features</a></li>
+        <li><a href="#equipment" class="nav-link transition hover:text-lime-neon">Equipment</a></li>
+        <li><a href="#plans" class="nav-link transition hover:text-lime-neon">Plans</a></li>
+        <li><a href="#trainers" class="nav-link transition hover:text-lime-neon">Trainers</a></li>
+        <li><a href="#contact" class="nav-link transition hover:text-lime-neon">Contact</a></li>
+      </ul>
+      <a href="#contact" class="nav-link hidden rounded-full bg-lime-neon px-5 py-2.5 text-sm font-semibold text-zinc-950 transition hover:bg-white md:inline-block">Free Day Pass</a>
+      <button id="menu-btn" class="rounded-lg p-2 text-white md:hidden" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <i data-lucide="menu" id="icon-open" class="h-6 w-6"></i>
+        <i data-lucide="x" id="icon-close" class="hidden h-6 w-6"></i>
+      </button>
+    </nav>
+    <div id="mobile-menu" class="hidden border-t border-white/10 bg-zinc-950 md:hidden">
+      <ul class="flex flex-col gap-1 px-5 py-4 text-base font-medium">
+        <li><a href="#features" class="nav-link block rounded-lg px-3 py-3 hover:bg-white/5">Features</a></li>
+        <li><a href="#equipment" class="nav-link block rounded-lg px-3 py-3 hover:bg-white/5">Equipment</a></li>
+        <li><a href="#plans" class="nav-link block rounded-lg px-3 py-3 hover:bg-white/5">Plans</a></li>
+        <li><a href="#trainers" class="nav-link block rounded-lg px-3 py-3 hover:bg-white/5">Trainers</a></li>
+        <li><a href="#contact" class="nav-link block rounded-lg px-3 py-3 hover:bg-white/5">Contact</a></li>
+        <li><a href="#contact" class="nav-link mt-2 block rounded-full bg-lime-neon px-3 py-3 text-center font-semibold text-zinc-950">Free Day Pass</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- Hero -->
+    <section class="relative isolate overflow-hidden">
+      <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1920&q=80" alt="" class="absolute inset-0 -z-20 h-full w-full object-cover" onerror="this.style.display='none'">
+      <div class="absolute inset-0 -z-10 bg-gradient-to-r from-zinc-950 via-zinc-950/85 to-zinc-950/40"></div>
+      <div class="absolute inset-x-0 bottom-0 -z-10 h-32 bg-gradient-to-t from-[#0c0e12] to-transparent"></div>
+      <div class="mx-auto max-w-7xl px-5 pb-20 pt-24 md:pb-28 md:pt-36">
+        <p class="mb-5 inline-flex items-center gap-2 rounded-full border border-lime-neon/40 bg-lime-neon/10 px-4 py-1.5 text-sm font-medium text-lime-neon">
+          <span class="h-2 w-2 animate-pulse rounded-full bg-lime-neon"></span>Open 24/7, every day of the year
+        </p>
+        <h1 class="max-w-3xl font-display text-6xl font-extrabold leading-[0.95] text-white sm:text-7xl lg:text-8xl">
+          Forge Your Best Self with <span class="text-lime-neon">Next-Gen Training.</span>
+        </h1>
+        <p class="mt-6 max-w-xl text-lg leading-relaxed text-zinc-300">
+          State-of-the-art facilities, certified coaches on every shift and round-the-clock access. Everything you need to train harder and recover smarter.
+        </p>
+        <div class="mt-9 flex flex-col gap-4 sm:flex-row">
+          <a href="#contact" class="nav-link inline-flex items-center justify-center gap-2 rounded-full bg-lime-neon px-8 py-4 font-semibold text-zinc-950 transition hover:scale-105 hover:bg-white">
+            Claim Your Free Day Pass <i data-lucide="arrow-right" class="h-5 w-5"></i>
+          </a>
+          <a href="#equipment" class="nav-link inline-flex items-center justify-center rounded-full border-2 border-white/30 px-8 py-4 font-semibold text-white transition hover:border-lime-neon hover:text-lime-neon">
+            Explore Equipment
+          </a>
+        </div>
+        <dl class="mt-16 grid max-w-2xl grid-cols-3 gap-6 border-t border-white/15 pt-8">
+          <div><dt class="sr-only">Active members</dt><dd class="font-display text-4xl font-bold text-white sm:text-5xl"><span class="counter" data-target="5000">0</span>+</dd><p class="mt-1 text-sm text-zinc-400">Active Members</p></div>
+          <div><dt class="sr-only">Elite trainers</dt><dd class="font-display text-4xl font-bold text-white sm:text-5xl"><span class="counter" data-target="50">0</span>+</dd><p class="mt-1 text-sm text-zinc-400">Elite Trainers</p></div>
+          <div><dt class="sr-only">Success rate</dt><dd class="font-display text-4xl font-bold text-white sm:text-5xl"><span class="counter" data-target="99">0</span>%</dd><p class="mt-1 text-sm text-zinc-400">Success Rate</p></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="mx-auto max-w-7xl scroll-mt-20 px-5 py-20">
+      <div class="max-w-2xl">
+        <h2 class="font-display text-5xl font-bold text-white sm:text-6xl">Built around how you train</h2>
+        <p class="mt-4 text-lg text-zinc-400">Four things that make XYZ Gym different from the gym down the road.</p>
+      </div>
+      <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="rounded-2xl border border-white/10 bg-zinc-900 p-6 transition hover:-translate-y-1 hover:border-lime-neon/50">
+          <i data-lucide="clock" class="h-9 w-9 text-lime-neon"></i>
+          <h3 class="mt-4 text-lg font-semibold text-white">24/7 access</h3>
+          <p class="mt-2 text-sm leading-relaxed text-zinc-400">Swipe in at 4 AM or midnight. Staffed hours run 5 AM to 11 PM.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-zinc-900 p-6 transition hover:-translate-y-1 hover:border-lime-neon/50">
+          <i data-lucide="badge-check" class="h-9 w-9 text-lime-neon"></i>
+          <h3 class="mt-4 text-lg font-semibold text-white">Certified coaching</h3>
+          <p class="mt-2 text-sm leading-relaxed text-zinc-400">Every trainer holds a nationally recognized certification.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-zinc-900 p-6 transition hover:-translate-y-1 hover:border-lime-neon/50">
+          <i data-lucide="activity" class="h-9 w-9 text-lime-neon"></i>
+          <h3 class="mt-4 text-lg font-semibold text-white">Smart progress tracking</h3>
+          <p class="mt-2 text-sm leading-relaxed text-zinc-400">Machines log your sets and reps to the XYZ app automatically.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-zinc-900 p-6 transition hover:-translate-y-1 hover:border-lime-neon/50">
+          <i data-lucide="users" class="h-9 w-9 text-lime-neon"></i>
+          <h3 class="mt-4 text-lg font-semibold text-white">Group classes</h3>
+          <p class="mt-2 text-sm leading-relaxed text-zinc-400">HIIT, strength, mobility and spin, with 60+ sessions every week.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Equipment -->
+    <section id="equipment" class="mx-auto max-w-7xl scroll-mt-20 px-5 py-20">
+      <div class="max-w-2xl">
+        <h2 class="font-display text-5xl font-bold text-white sm:text-6xl">Equipment and facilities</h2>
+        <p class="mt-4 text-lg text-zinc-400">Five training zones, each fitted with gear you would normally find only in performance labs.</p>
+      </div>
+      <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-6">
+
+        <article class="img-zoom group relative overflow-hidden rounded-3xl bg-zinc-900 lg:col-span-3">
+          <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1000&q=80" alt="Pin-loaded strength machines on the gym floor" loading="lazy" class="h-80 w-full object-cover" onerror="this.style.display='none'">
+          <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/50 to-transparent"></div>
+          <div class="absolute inset-x-0 bottom-0 p-6">
+            <div class="mb-3 flex flex-wrap gap-2"><span class="rounded-full bg-lime-neon/15 px-3 py-1 text-xs font-medium text-lime-neon">Smart Tracking</span><span class="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white">Ergonomic</span></div>
+            <h3 class="text-2xl font-semibold text-white">Strength and pin-loaded machines</h3>
+            <p class="mt-1 text-sm text-zinc-300">Biomechanically engineered to match your natural range of motion.</p>
+          </div>
+        </article>
+
+        <article class="img-zoom group relative overflow-hidden rounded-3xl bg-zinc-900 lg:col-span-3">
+          <img src="https://images.unsplash.com/photo-1576678927484-cc907957088c?auto=format&fit=crop&w=1000&q=80" alt="Barbell on an Olympic lifting platform" loading="lazy" class="h-80 w-full object-cover" onerror="this.style.display='none'">
+          <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/50 to-transparent"></div>
+          <div class="absolute inset-x-0 bottom-0 p-6">
+            <div class="mb-3 flex flex-wrap gap-2"><span class="rounded-full bg-lime-neon/15 px-3 py-1 text-xs font-medium text-lime-neon">Competition Grade</span><span class="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white">Calibrated Plates</span></div>
+            <h3 class="text-2xl font-semibold text-white">Olympic lifting platforms</h3>
+            <p class="mt-1 text-sm text-zinc-300">Dedicated platforms with calibrated bumper plates and chalk stations.</p>
+          </div>
+        </article>
+
+        <article class="img-zoom group relative overflow-hidden rounded-3xl bg-zinc-900 lg:col-span-2">
+          <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?auto=format&fit=crop&w=800&q=80" alt="Cardio deck with treadmills and rowers" loading="lazy" class="h-72 w-full object-cover" onerror="this.style.display='none'">
+          <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/50 to-transparent"></div>
+          <div class="absolute inset-x-0 bottom-0 p-6">
+            <div class="mb-3 flex flex-wrap gap-2"><span class="rounded-full bg-lime-neon/15 px-3 py-1 text-xs font-medium text-lime-neon">Interactive Consoles</span></div>
+            <h3 class="text-xl font-semibold text-white">Smart cardio deck</h3>
+            <p class="mt-1 text-sm text-zinc-300">HIIT rowers, curved treadmills and connected consoles.</p>
+          </div>
+        </article>
+
+        <article class="img-zoom group relative overflow-hidden rounded-3xl bg-zinc-900 lg:col-span-2">
+          <img src="https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=800&q=80" alt="Kettlebells on functional training turf" loading="lazy" class="h-72 w-full object-cover" onerror="this.style.display='none'">
+          <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/50 to-transparent"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/50 to-transparent"></div>
+          <div class="absolute inset-x-0 bottom-0 p-6">
+            <div class="mb-3 flex flex-wrap gap-2"><span class="rounded-full bg-lime-neon/15 px-3 py-1 text-xs font-medium text-lime-neon">Full-Body</span><span class="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white">Open Turf</span></div>
+            <h3 class="text-xl font-semibold text-white">Functional training turf</h3>
+            <p class="mt-1 text-sm text-zinc-300">Sled tracks, battle ropes and a full kettlebell rack.</p>
+          </div>
+        </article>
+
+        <article class="img-zoom group relative overflow-hidden rounded-3xl bg-zinc-900 md:col-span-2 lg:col-span-2">
+          <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=800&q=80" alt="Calm recovery lounge" loading="lazy" class="h-72 w-full object-cover" onerror="this.style.display='none'">
+          <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/50 to-transparent"></div>
+          <div class="absolute inset-x-0 bottom-0 p-6">
+            <div class="mb-3 flex flex-wrap gap-2"><span class="rounded-full bg-lime-neon/15 px-3 py-1 text-xs font-medium text-lime-neon">Infrared Sauna</span><span class="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white">Cryo</span><span class="rounded-full bg-white/10 px-3 py-1 text-xs font-medium text-white">Percussion</span></div>
+            <h3 class="text-xl font-semibold text-white">Recovery lounge</h3>
+            <p class="mt-1 text-sm text-zinc-300">Infrared sauna, cryo-recovery and percussion therapy.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Plans -->
+    <section id="plans" class="mx-auto max-w-7xl scroll-mt-20 px-5 py-20">
+      <div class="mx-auto max-w-2xl text-center">
+        <h2 class="font-display text-5xl font-bold text-white sm:text-6xl">Pick your membership</h2>
+        <p class="mt-4 text-lg text-zinc-400">No joining fee. Cancel any time with 30 days' notice.</p>
+      </div>
+      <div class="mt-14 grid items-stretch gap-6 lg:grid-cols-3">
+
+        <div class="flex flex-col rounded-3xl border border-white/10 bg-zinc-900 p-8">
+          <h3 class="text-xl font-semibold text-white">Starter</h3>
+          <p class="mt-1 text-sm text-zinc-400">Gym floor and locker rooms</p>
+          <p class="mt-6 font-display text-6xl font-bold text-white">$29<span class="text-lg font-medium text-zinc-400">/month</span></p>
+          <ul class="mt-8 flex-1 space-y-3 text-sm">
+            <li class="flex gap-3"><i data-lucide="check" class="h-5 w-5 shrink-0 text-lime-neon"></i>Full gym floor access</li>
+            <li class="flex gap-3"><i data-lucide="check" class="h-5 w-5 shrink-0 text-lime-neon"></i>Locker rooms and showers</li>
+            <li class="flex gap-3"><i data-lucide="check" class="h-5 w-5 shrink-0 text-lime-neon"></i>24/7 key-fob entry</li>
+            <li class="flex gap-3"><i data-lucide="check" class="h-5 w-5 shrink-0 text-lime-neon"></i>XYZ app progress tracking</li>
+          </ul>
+          <a href="#contact" data-plan="Starter" class="nav-link plan-btn mt-8 block rounded-full border-2 border-white/30 py-3 text-center font-semibold text-white transition hover:border-lime-neon hover:text-lime-neon">Choose Starter</a>
+        </div>
+
+        <div class="relative flex flex-col rounded-3xl border-2 border-lime-neon bg-zinc-900 p-8 shadow-[0_0_60px_-15px_rgba(182,255,60,0.45)] lg:-my-4 lg:py-12">
+          <span class="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-lime-neon px-4 py-1 text-sm font-semibold text-zinc-950">Most popular</span>
+          <h3 class="text-xl font-semibold text-white">Pro</h3>
+          <p class="mt-1 text-sm text-zinc-400">Full floor, classes and sauna</p>
+          <p class="mt-6 font-display text-6xl font-bold text-lime-neon">$59<span class="text-lg font-medium text-zinc-400">/month</span></p>
+          <ul class="mt-8 flex-1 space-y-3 text-sm">
+            <li class="flex gap-3"><i data-lucide="check" class="h-5 w-5 shrink-0 text-lime-neon"></i>Everything in Starter</li>
+            <li class="flex gap-3"><i data-lucide="check" class="h-5 w-5 shrink-0 text-lime-neon"></i>Unlimited group classes</li>
+            <li class="flex gap-3"><i data-lucide="check" class="h-5 w-5 shrink-0 text-lime-neon"></i>Infrared sauna access</li>
+            <li class="flex gap-3"><i data-lucide="check" class="h-5 w-5 shrink-0 text-lime-neon"></i>Functional turf and cardio deck</li>
+            <li class="flex gap-3"><i data-lucide="check" class="h-5 w-5 shrink-0 text-lime-neon"></i>Bring a friend twice a month</li>
+          </ul>
+          <a href="#contact" data-plan="Pro" class="nav-link plan-btn mt-8 block rounded-full bg-lime-neon py-3 text-center font-semibold text-zinc-950 transition hover:bg-white">Choose Pro</a>
+        </div>
+
+        <div class="flex flex-col rounded-3xl border border-white/10 bg-zinc-900 p-8">
+          <h3 class="text-xl font-semibold text-white">Elite</h3>
+          <p class="mt-1 text-sm text-zinc-400">All-inclusive VIP coaching</p>
+          <p class="mt-6 font-display text-6xl font-bold text-white">$99<span class="text-lg font-medium text-zinc-400">/month</span></p>
+          <ul class="mt-8 flex-1 space-y-3 text-sm">
+            <li class="flex gap-3"><i data-lucide="check" class="h-5 w-5 shrink-0 text-lime-neon"></i>Everything in Pro</li>
+            <li class="flex gap-3"><i data-lucide="check" class="h-5 w-5 shrink-0 text-lime-neon"></i>Monthly 1-on-1 personal coaching session</li>
+            <li class="flex gap-3"><i data-lucide="check" class="h-5 w-5 shrink-0 text-lime-neon"></i>Customized nutrition plan</li>
+            <li class="flex gap-3"><i data-lucide="check" class="h-5 w-5 shrink-0 text-lime-neon"></i>Cryo-recovery and percussion therapy</li>
+            <li class="flex gap-3"><i data-lucide="check" class="h-5 w-5 shrink-0 text-lime-neon"></i>Priority class booking</li>
+          </ul>
+          <a href="#contact" data-plan="Elite" class="nav-link plan-btn mt-8 block rounded-full border-2 border-white/30 py-3 text-center font-semibold text-white transition hover:border-lime-neon hover:text-lime-neon">Choose Elite</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Trainers -->
+    <section id="trainers" class="mx-auto max-w-7xl scroll-mt-20 px-5 py-20">
+      <div class="max-w-2xl">
+        <h2 class="font-display text-5xl font-bold text-white sm:text-6xl">Real results from real members</h2>
+        <p class="mt-4 text-lg text-zinc-400">Coached by our trainers, earned by the people below.</p>
+      </div>
+      <div class="mt-12 grid gap-6 md:grid-cols-3">
+
+        <figure class="flex flex-col rounded-3xl border border-white/10 bg-zinc-900 p-7">
+          <div class="flex gap-1 text-lime-neon" role="img" aria-label="5 out of 5 stars">
+            <i data-lucide="star" class="h-5 w-5 fill-current"></i><i data-lucide="star" class="h-5 w-5 fill-current"></i><i data-lucide="star" class="h-5 w-5 fill-current"></i><i data-lucide="star" class="h-5 w-5 fill-current"></i><i data-lucide="star" class="h-5 w-5 fill-current"></i>
+          </div>
+          <blockquote class="mt-5 flex-1 leading-relaxed text-zinc-200">"I had never touched a barbell. My coach built a plan around my schedule and I've stuck to it for eight months."</blockquote>
+          <div class="mt-6 grid grid-cols-2 gap-3 border-t border-white/10 pt-5 text-center">
+            <div><p class="font-display text-3xl font-bold text-lime-neon">-18 kg</p><p class="text-xs text-zinc-400">Body fat lost</p></div>
+            <div><p class="font-display text-3xl font-bold text-lime-neon">8 mo</p><p class="text-xs text-zinc-400">Consistent training</p></div>
+          </div>
+          <figcaption class="mt-5 flex items-center gap-3"><span class="flex h-10 w-10 items-center justify-center rounded-full bg-lime-neon font-semibold text-zinc-950">RM</span><span class="text-sm"><span class="block font-semibold text-white">Rohan M.</span>Pro member</span></figcaption>
+        </figure>
+
+        <figure class="flex flex-col rounded-3xl border border-white/10 bg-zinc-900 p-7">
+          <div class="flex gap-1 text-lime-neon" role="img" aria-label="5 out of 5 stars">
+            <i data-lucide="star" class="h-5 w-5 fill-current"></i><i data-lucide="star" class="h-5 w-5 fill-current"></i><i data-lucide="star" class="h-5 w-5 fill-current"></i><i data-lucide="star" class="h-5 w-5 fill-current"></i><i data-lucide="star" class="h-5 w-5 fill-current"></i>
+          </div>
+          <blockquote class="mt-5 flex-1 leading-relaxed text-zinc-200">"The Olympic platforms and coaching took my clean and jerk from 40 kg to 75 kg in a year. Nothing else comes close."</blockquote>
+          <div class="mt-6 grid grid-cols-2 gap-3 border-t border-white/10 pt-5 text-center">
+            <div><p class="font-display text-3xl font-bold text-lime-neon">+35 kg</p><p class="text-xs text-zinc-400">Clean and jerk</p></div>
+            <div><p class="font-display text-3xl font-bold text-lime-neon">12 mo</p><p class="text-xs text-zinc-400">Consistent training</p></div>
+          </div>
+          <figcaption class="mt-5 flex items-center gap-3"><span class="flex h-10 w-10 items-center justify-center rounded-full bg-lime-neon font-semibold text-zinc-950">PS</span><span class="text-sm"><span class="block font-semibold text-white">Priya S.</span>Elite member</span></figcaption>
+        </figure>
+
+        <figure class="flex flex-col rounded-3xl border border-white/10 bg-zinc-900 p-7">
+          <div class="flex gap-1 text-lime-neon" role="img" aria-label="5 out of 5 stars">
+            <i data-lucide="star" class="h-5 w-5 fill-current"></i><i data-lucide="star" class="h-5 w-5 fill-current"></i><i data-lucide="star" class="h-5 w-5 fill-current"></i><i data-lucide="star" class="h-5 w-5 fill-current"></i><i data-lucide="star" class="h-5 w-5 fill-current"></i>
+          </div>
+          <blockquote class="mt-5 flex-1 leading-relaxed text-zinc-200">"Night-shift work meant I could never make a class. 24/7 access and the recovery lounge changed how I feel every day."</blockquote>
+          <div class="mt-6 grid grid-cols-2 gap-3 border-t border-white/10 pt-5 text-center">
+            <div><p class="font-display text-3xl font-bold text-lime-neon">-6 min</p><p class="text-xs text-zinc-400">5K time</p></div>
+            <div><p class="font-display text-3xl font-bold text-lime-neon">5 mo</p><p class="text-xs text-zinc-400">Consistent training</p></div>
+          </div>
+          <figcaption class="mt-5 flex items-center gap-3"><span class="flex h-10 w-10 items-center justify-center rounded-full bg-lime-neon font-semibold text-zinc-950">AK</span><span class="text-sm"><span class="block font-semibold text-white">Arjun K.</span>Starter member</span></figcaption>
+        </figure>
+
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="mx-auto max-w-7xl scroll-mt-20 px-5 py-20">
+      <div class="grid gap-10 overflow-hidden rounded-3xl border border-white/10 bg-zinc-900 p-6 sm:p-10 lg:grid-cols-2">
+
+        <div>
+          <h2 class="font-display text-5xl font-bold text-white sm:text-6xl">Claim your 1-day free trial</h2>
+          <p class="mt-3 text-zinc-400">Fill in the form and we'll confirm your visit within one hour during staffed hours.</p>
+
+          <form id="trial-form" class="mt-8 space-y-5" novalidate>
+            <div>
+              <label for="name" class="mb-1.5 block text-sm font-medium text-white">Full name</label>
+              <input id="name" name="name" type="text" required autocomplete="name" class="w-full rounded-xl border border-white/15 bg-zinc-950 px-4 py-3 text-white placeholder-zinc-500 focus:border-lime-neon focus:outline-none" placeholder="Jane Doe">
+              <p class="err mt-1 hidden text-sm text-orange-400">Enter your full name.</p>
+            </div>
+            <div>
+              <label for="email" class="mb-1.5 block text-sm font-medium text-white">Email</label>
+              <input id="email" name="email" type="email" required autocomplete="email" class="w-full rounded-xl border border-white/15 bg-zinc-950 px-4 py-3 text-white placeholder-zinc-500 focus:border-lime-neon focus:outline-none" placeholder="jane@example.com">
+              <p class="err mt-1 hidden text-sm text-orange-400">Enter a valid email address.</p>
+            </div>
+            <div>
+              <label for="phone" class="mb-1.5 block text-sm font-medium text-white">Phone</label>
+              <input id="phone" name="phone" type="tel" required autocomplete="tel" class="w-full rounded-xl border border-white/15 bg-zinc-950 px-4 py-3 text-white placeholder-zinc-500 focus:border-lime-neon focus:outline-none" placeholder="+1 555 010 2030">
+              <p class="err mt-1 hidden text-sm text-orange-400">Enter a phone number with at least 7 digits.</p>
+            </div>
+            <div>
+              <label for="slot" class="mb-1.5 block text-sm font-medium text-white">Preferred time slot</label>
+              <select id="slot" name="slot" required class="w-full rounded-xl border border-white/15 bg-zinc-950 px-4 py-3 text-white focus:border-lime-neon focus:outline-none">
+                <option value="">Select a time</option>
+                <option>Early morning (5 AM - 8 AM)</option>
+                <option>Morning (8 AM - 12 PM)</option>
+                <option>Afternoon (12 PM - 5 PM)</option>
+                <option>Evening (5 PM - 11 PM)</option>
+                <option>Late night (11 PM - 5 AM, self-serve)</option>
+              </select>
+              <p class="err mt-1 hidden text-sm text-orange-400">Choose a time slot.</p>
+            </div>
+            <button type="submit" class="w-full rounded-full bg-lime-neon py-4 font-semibold text-zinc-950 transition hover:bg-white">Get my free day pass</button>
+            <p id="form-success" class="hidden rounded-xl border border-lime-neon/40 bg-lime-neon/10 p-4 text-sm text-lime-neon" role="status"></p>
+          </form>
+        </div>
+
+        <div class="flex flex-col gap-6">
+          <div class="grid gap-4 sm:grid-cols-2">
+            <div class="rounded-2xl bg-zinc-950 p-5">
+              <i data-lucide="clock" class="h-6 w-6 text-lime-neon"></i>
+              <h3 class="mt-3 font-semibold text-white">Hours</h3>
+              <p class="mt-1 text-sm text-zinc-400">Open 24/7 with key-fob access.<br>Staffed 5:00 AM - 11:00 PM.</p>
+            </div>
+            <div class="rounded-2xl bg-zinc-950 p-5">
+              <i data-lucide="map-pin" class="h-6 w-6 text-lime-neon"></i>
+              <h3 class="mt-3 font-semibold text-white">Address</h3>
+              <p class="mt-1 text-sm text-zinc-400">123 Fitness Avenue,<br>Downtown District, 10001</p>
+            </div>
+          </div>
+
+          <div class="relative flex min-h-[220px] flex-1 items-center justify-center overflow-hidden rounded-2xl border border-white/10 bg-zinc-950 text-center">
+            <div class="absolute inset-0 opacity-20" style="background-image:linear-gradient(#b6ff3c22 1px,transparent 1px),linear-gradient(90deg,#b6ff3c22 1px,transparent 1px);background-size:32px 32px"></div>
+            <div class="relative px-6">
+              <i data-lucide="map-pin" class="mx-auto h-10 w-10 text-lime-neon"></i>
+              <p class="mt-2 font-semibold text-white">XYZ Gym, 123 Fitness Avenue</p>
+              <p class="text-sm text-zinc-400">Replace this block with your Google Maps embed iframe.</p>
+            </div>
+          </div>
+
+          <div class="flex flex-col gap-3 sm:flex-row">
+            <a href="tel:+15550102030" class="inline-flex flex-1 items-center justify-center gap-2 rounded-full border-2 border-white/30 py-3.5 font-semibold text-white transition hover:border-lime-neon hover:text-lime-neon">
+              <i data-lucide="phone" class="h-5 w-5"></i>+1 555 010 2030
+            </a>
+            <a href="https://wa.me/15550102030?text=Hi%20XYZ%20Gym%2C%20I'd%20like%20to%20know%20more%20about%20memberships." target="_blank" rel="noopener" class="inline-flex flex-1 items-center justify-center gap-2 rounded-full bg-[#25D366] py-3.5 font-semibold text-zinc-950 transition hover:brightness-110">
+              <i data-lucide="message-circle" class="h-5 w-5"></i>Chat on WhatsApp
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-zinc-950">
+    <div class="mx-auto grid max-w-7xl gap-10 px-5 py-14 md:grid-cols-3">
+      <div>
+        <a href="#top" class="nav-link flex items-center gap-2 font-display text-3xl font-extrabold text-white"><i data-lucide="dumbbell" class="h-7 w-7 text-lime-neon"></i>XYZ GYM</a>
+        <p class="mt-3 max-w-xs text-sm text-zinc-400">Premium training, expert coaching and recovery, open around the clock.</p>
+      </div>
+      <nav aria-label="Footer">
+        <h3 class="font-semibold text-white">Quick links</h3>
+        <ul class="mt-4 grid grid-cols-2 gap-2 text-sm">
+          <li><a href="#features" class="nav-link hover:text-lime-neon">Features</a></li>
+          <li><a href="#equipment" class="nav-link hover:text-lime-neon">Equipment</a></li>
+          <li><a href="#plans" class="nav-link hover:text-lime-neon">Plans</a></li>
+          <li><a href="#trainers" class="nav-link hover:text-lime-neon">Trainers</a></li>
+          <li><a href="#contact" class="nav-link hover:text-lime-neon">Contact</a></li>
+          <li><a href="#privacy" class="hover:text-lime-neon">Privacy Policy</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h3 class="font-semibold text-white">Follow us</h3>
+        <div class="mt-4 flex gap-3">
+          <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram" class="rounded-full border border-white/15 p-3 transition hover:border-lime-neon hover:text-lime-neon"><i data-lucide="instagram" class="h-5 w-5"></i></a>
+          <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube" class="rounded-full border border-white/15 p-3 transition hover:border-lime-neon hover:text-lime-neon"><i data-lucide="youtube" class="h-5 w-5"></i></a>
+          <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook" class="rounded-full border border-white/15 p-3 transition hover:border-lime-neon hover:text-lime-neon"><i data-lucide="facebook" class="h-5 w-5"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/10 py-6 text-center text-sm text-zinc-500">
+      <p>&copy; <span id="year">2026</span> XYZ Gym. All rights reserved. <a id="privacy" href="#privacy" class="underline hover:text-lime-neon">Privacy Policy</a></p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      lucide.createIcons();
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Mobile menu
+      var btn = document.getElementById('menu-btn');
+      var menu = document.getElementById('mobile-menu');
+      var iconOpen = document.getElementById('icon-open');
+      var iconClose = document.getElementById('icon-close');
+      function setMenu(open) {
+        menu.classList.toggle('hidden', !open);
+        iconOpen.classList.toggle('hidden', open);
+        iconClose.classList.toggle('hidden', !open);
+        btn.setAttribute('aria-expanded', String(open));
+      }
+      btn.addEventListener('click', function () { setMenu(menu.classList.contains('hidden')); });
+
+      // Smooth scrolling (accounts for sticky header) and menu close
+      document.querySelectorAll('.nav-link').forEach(function (link) {
+        link.addEventListener('click', function (e) {
+          var id = link.getAttribute('href');
+          var target = id && id.length > 1 ? document.querySelector(id) : null;
+          if (!target) { return; }
+          e.preventDefault();
+          setMenu(false);
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          history.replaceState(null, '', id);
+        });
+      });
+
+      // Animated counters (run once when the hero stats are visible)
+      var counters = document.querySelectorAll('.counter');
+      function runCounter(el) {
+        var target = +el.dataset.target, start = null, dur = 1600;
+        function step(ts) {
+          if (!start) { start = ts; }
+          var p = Math.min((ts - start) / dur, 1);
+          el.textContent = Math.floor(target * (1 - Math.pow(1 - p, 3))).toLocaleString();
+          if (p < 1) { requestAnimationFrame(step); }
+        }
+        requestAnimationFrame(step);
+      }
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) {
+            if (en.isIntersecting) { runCounter(en.target); io.unobserve(en.target); }
+          });
+        }, { threshold: 0.6 });
+        counters.forEach(function (c) { io.observe(c); });
+      } else {
+        counters.forEach(function (c) { c.textContent = (+c.dataset.target).toLocaleString(); });
+      }
+
+      // Trial form validation and confirmation
+      var form = document.getElementById('trial-form');
+      var success = document.getElementById('form-success');
+      var chosenPlan = '';
+      document.querySelectorAll('.plan-btn').forEach(function (b) {
+        b.addEventListener('click', function () { chosenPlan = b.dataset.plan; });
+      });
+      function setError(input, bad) {
+        input.parentElement.querySelector('.err').classList.toggle('hidden', !bad);
+        input.classList.toggle('border-orange-400', bad);
+        input.setAttribute('aria-invalid', String(bad));
+      }
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var f = form.elements, ok = true;
+        var checks = [
+          [f.name, f.name.value.trim().length >= 2],
+          [f.email, /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email.value.trim())],
+          [f.phone, f.phone.value.replace(/\D/g, '').length >= 7],
+          [f.slot, f.slot.value !== '']
+        ];
+        checks.forEach(function (c) { setError(c[0], !c[1]); if (!c[1]) { ok = false; } });
+        if (!ok) { return; }
+        var first = f.name.value.trim().split(' ')[0];
+        success.textContent = 'Thanks, ' + first + '! Your free day pass request for ' + f.slot.value +
+          (chosenPlan ? ' (interested in ' + chosenPlan + ')' : '') + ' is in. We will confirm by email shortly.';
+        success.classList.remove('hidden');
+        form.reset();
+        chosenPlan = '';
+        // Connect to your backend here, e.g. fetch('/api/trial', { method: 'POST', body: new FormData(form) })
+      });
+    })();
+  </script>
+</body>
+</html>
